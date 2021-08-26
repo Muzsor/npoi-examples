@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseBasicFormula", "ss\UseBa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultplicationTable", "ss\MultplicationTable\MultplicationTable.csproj", "{0183662A-B1B4-4E65-916E-C2FB397B8A3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadAndPrintData", "ss\ReadAndPrintData\ReadAndPrintData.csproj", "{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,14 @@ Global
 		{0183662A-B1B4-4E65-916E-C2FB397B8A3E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0183662A-B1B4-4E65-916E-C2FB397B8A3E}.Release|x86.ActiveCfg = Release|Any CPU
 		{0183662A-B1B4-4E65-916E-C2FB397B8A3E}.Release|x86.Build.0 = Release|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Debug|x86.Build.0 = Debug|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|x86.ActiveCfg = Release|Any CPU
+		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
