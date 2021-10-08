@@ -11,9 +11,10 @@ namespace LineChart
         const int NUM_OF_ROWS = 3;
         const int NUM_OF_COLUMNS = 10;
 
-        static void CreateChart(IDrawing drawing, ISheet sheet, IClientAnchor anchor, string serie1, string serie2)
+        static void CreateChart(IDrawing drawing, ISheet sheet, IClientAnchor anchor, string serie1, string serie2, bool enableMajorGridline=false)
         {
-            IChart chart = drawing.CreateChart(anchor);
+            XSSFChart chart = (XSSFChart)drawing.CreateChart(anchor);
+            chart.SetTitle("Test 1");
             IChartLegend legend = chart.GetOrCreateLegend();
             legend.Position = LegendPosition.TopRight;
 
@@ -34,6 +35,11 @@ namespace LineChart
             s2.SetTitle(serie2);
 
             chart.Plot(data, bottomAxis, leftAxis);
+            //add major gridline, available since NPOI 2.5.5
+            var plotArea = chart.GetCTChart().plotArea;
+            plotArea.catAx[0].AddNewMajorGridlines();
+            plotArea.valAx[0].AddNewMajorGridlines();
+            
         }
 
         static void Main(string[] args)
@@ -59,7 +65,7 @@ namespace LineChart
             IClientAnchor anchor1 = drawing.CreateAnchor(0, 0, 0, 0, 0, 5, 10, 15);
             CreateChart(drawing, sheet, anchor1, "title1", "title2");
             IClientAnchor anchor2 = drawing.CreateAnchor(0, 0, 0, 0, 0, 20, 10, 35);
-            CreateChart(drawing, sheet, anchor2, "s1", "s2");
+            CreateChart(drawing, sheet, anchor2, "s1", "s2", true);
             using (FileStream fs = File.Create("test.xlsx"))
             {
                 wb.Write(fs);
