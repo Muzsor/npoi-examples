@@ -14,7 +14,7 @@ namespace NPOI.Examples.XSSF.MeringCellsInXlsx
             ISheet sheet = workbook.CreateSheet();
 
             var cell = sheet.CreateRow(1).CreateCell(1);
-            cell.SetCellValue(new XSSFRichTextString("This test"));
+            cell.SetCellValue(new XSSFRichTextString("test1"));
 
             var style1=workbook.CreateCellStyle();
             style1.Alignment = HorizontalAlignment.Center;
@@ -24,6 +24,12 @@ namespace NPOI.Examples.XSSF.MeringCellsInXlsx
             cell.CellStyle = style1;
 
             sheet.AddMergedRegion(new CellRangeAddress(1, 1, 1, 2));
+
+            var cell2 = sheet.CreateRow(2).CreateCell(1);
+            cell2.SetCellValue("test2");
+            cell2.CellStyle = style1;
+
+            sheet.AddMergedRegion(new CellRangeAddress(2, 2, 1, 2));
 
             var cra=new CellRangeAddress(2, 3, 4, 5);
             RegionUtil.SetBorderTop((int)BorderStyle.DashDot, cra, sheet);
