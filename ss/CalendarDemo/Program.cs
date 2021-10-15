@@ -36,7 +36,7 @@ namespace CalendarDemo
 
             IWorkbook wb = xlsx ? new XSSFWorkbook() as IWorkbook : new HSSFWorkbook() as IWorkbook;
 
-            Dictionary<String, ICellStyle> styles = createStyles(wb);
+            Dictionary<String, ICellStyle> styles = CreateStyles(wb);
             DateTime dtM;
             for (int month = 0; month < 12; month++)
             {
@@ -92,27 +92,26 @@ namespace CalendarDemo
                         ICell dayCell_2 = row.CreateCell(i * 2 + 1);
 
                         int day_of_week = (int)dtM.DayOfWeek;
-                        if (cnt >= day_of_week && dtM.Month == (month + 1))
+                        if (cnt >= day_of_week+1 && dtM.Month == (month + 1))
                         {
-                            dayCell_1.SetCellValue(day);
-                            //calendar.set(Calendar.DAY_OF_MONTH, ++day);
-                            dtM.AddDays(++day);
+                            dayCell_1.SetCellValue(day++);
 
                             if (i == 0 || i == days.Length - 1)
                             {
-                                dayCell_1.CellStyle = (styles["weekend_left"]);
-                                dayCell_2.CellStyle = (styles["weekend_right"]);
+                                dayCell_1.CellStyle = styles["weekend_left"];
+                                dayCell_2.CellStyle = styles["weekend_right"];
                             }
                             else
                             {
-                                dayCell_1.CellStyle = (styles["workday_left"]);
-                                dayCell_2.CellStyle = (styles["workday_right"]);
+                                dayCell_1.CellStyle = styles["workday_left"];
+                                dayCell_2.CellStyle = styles["workday_right"];
                             }
+                            dtM = dtM.AddDays(1);
                         }
                         else
                         {
-                            dayCell_1.CellStyle = (styles["grey_left"]);
-                            dayCell_2.CellStyle = (styles["grey_right"]);
+                            dayCell_1.CellStyle = styles["grey_left"];
+                            dayCell_2.CellStyle = styles["grey_right"];
                         }
                         cnt++;
                     }
@@ -123,15 +122,16 @@ namespace CalendarDemo
             // Write the output to a file
             String file = "calendar.xls";
             if (wb is XSSFWorkbook) file += "x";
-            FileStream out1 = new FileStream(file, FileMode.Create);
-            wb.Write(out1);
-            out1.Close();
+            using (FileStream fs = new FileStream(file, FileMode.Create))
+            {
+                wb.Write(fs);
+            }
         }
 
         /**
      * cell styles used for formatting calendar sheets
      */
-        private static Dictionary<String, ICellStyle> createStyles(IWorkbook wb)
+        private static Dictionary<String, ICellStyle> CreateStyles(IWorkbook wb)
         {
             Dictionary<String, ICellStyle> styles = new Dictionary<String, ICellStyle>();
 
