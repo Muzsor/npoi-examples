@@ -18,7 +18,7 @@
 /* ================================================================
  * Author: Tony Qu 
  * Author's email: tonyqus (at) gmail.com 
- * NPOI HomePage: http://www.codeplex.com/npoi
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
  * Contributors:
  * 
  * ==============================================================*/
