@@ -1,4 +1,10 @@
-﻿using NPOI.SS.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.IO;
 
@@ -22,16 +28,18 @@ namespace NPOI.Examples.XSSF.InsertPicturesInXlsx
             //Reset the image to the original size.
             //picture.Resize();   //Note: Resize will reset client anchor you set.
             picture.LineStyle = LineStyle.DashDotGel;
-
+            picture.Resize();
             //second picture
             int imageId2 = LoadImage("../../image/HumpbackWhale.jpg", workbook);
             XSSFClientAnchor anchor2 = new XSSFClientAnchor(500, 200, 0, 0, 5, 10, 7, 15);
             XSSFPicture picture2 = (XSSFPicture)patriarch.CreatePicture(anchor2, imageId2);
             picture.LineStyle = LineStyle.DashDotGel;
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
 
         public static int LoadImage(string path, IWorkbook wb)

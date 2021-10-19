@@ -29,7 +29,10 @@ namespace CopySheet
                 sheet2.CopyTo(product, sheet2.SheetName, true, true);
             }
 
-            product.Write(new FileStream("test.xlsx", FileMode.Create, FileAccess.ReadWrite));
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                product.Write(sw);
+            }
         }
     }
 }

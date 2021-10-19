@@ -70,9 +70,10 @@ namespace NPOI.Examples.XSSF.CreateCommentInXlsx
             comment2.Row = 6;
             comment2.Column = 1;
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

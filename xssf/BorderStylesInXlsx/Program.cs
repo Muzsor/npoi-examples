@@ -1,4 +1,10 @@
-﻿using NPOI.SS.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.IO;
 
@@ -41,9 +47,10 @@ namespace NPOI.Examples.XSSF.BorderStylesInXlsx
             style2.BorderDiagonalColor = IndexedColors.Red.Index;
             cell2.CellStyle = style2;
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (var sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

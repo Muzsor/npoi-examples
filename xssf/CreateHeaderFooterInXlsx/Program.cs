@@ -23,11 +23,12 @@ namespace CreateHeaderFooterInXlsx
             s1.Header.Left = HSSFHeader.Page;   //Page is a static property of HSSFHeader and HSSFFooter
             s1.Header.Center = "This is a test sheet";
             //set footer text
-            s1.Footer.Left = "Copyright NPOI Team";
-            s1.Footer.Right = "created by Tony Qu（瞿杰）";
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            s1.Footer.Left = "Copyright Nissl Lab";
+            s1.Footer.Right = "created by NPOI team";
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

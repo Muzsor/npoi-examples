@@ -27,9 +27,10 @@ namespace NPOI.Examples.XSSF.HideColumnAndRowInXlsx
 
             //hide column C
             s.SetColumnHidden(2, true);
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

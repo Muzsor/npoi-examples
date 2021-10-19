@@ -138,9 +138,10 @@ namespace NPOI.Examples.XSSF.FillBackgroundInXlsx
             style17.FillBackgroundColor = IndexedColors.Yellow.Index;
             sheet1.CreateRow(16).CreateCell(0).CellStyle = style17;
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

@@ -21,9 +21,10 @@ namespace NPOI.Examples.XSSF.SetWidthAndHeightInXlsx
             sheet1.CreateRow(1).Height = 200 * 20;
             sheet1.CreateRow(2).Height = 300 * 20;
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

@@ -27,9 +27,9 @@ namespace ConditionalFormats
             ShadeAlt(wb.CreateSheet("Shade Alt"));
             ShadeBands(wb.CreateSheet("Shade Bands"));
 
-            using (var fs = File.Create("test.xlsx"))
+            using (var sw = File.Create("test.xlsx"))
             {
-                wb.Write(fs);
+                wb.Write(sw);
             }
         }
         /**
