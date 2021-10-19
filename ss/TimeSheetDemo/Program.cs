@@ -93,13 +93,19 @@ namespace TimeSheetDemo
                     {
                         //the 10th cell contains sum over week days, e.g. SUM(C3:I3)
                         String reference = "C" + rownum + ":I" + rownum;
-                        cell.CellFormula = ("SUM(" + reference + ")");
+                        cell.CellFormula = "SUM(" + reference + ")";
                         cell.CellStyle = (styles["formula"]);
+                    }
+                    if (j == 10)
+                    {
+                        
+                        cell.CellFormula = string.Format("IF(J{0} - 40 > 0, J{0} - 40, 0)", rownum);
+                        cell.CellStyle = styles["formula"];
                     }
                     else if (j == 11)
                     {
-                        cell.CellFormula = ("J" + rownum + "-K" + rownum);
-                        cell.CellStyle = (styles["formula"]);
+                        cell.CellFormula = "J" + rownum + "-K" + rownum;
+                        cell.CellStyle = styles["formula"];
                     }
                     else
                     {
@@ -244,9 +250,10 @@ namespace TimeSheetDemo
             string filename = "timesheet.xls";
             if (workbook is XSSFWorkbook) filename += "x";
             //Write the stream data of workbook to the root directory
-            FileStream file = new FileStream(filename, FileMode.Create);
-            workbook.Write(file);
-            file.Close();
+            using (FileStream file = new FileStream(filename, FileMode.Create))
+            {
+                workbook.Write(file);
+            }
         }
 
         static void InitializeWorkbook(string[] args)
