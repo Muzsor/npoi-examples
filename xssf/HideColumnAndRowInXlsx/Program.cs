@@ -1,4 +1,10 @@
-﻿using NPOI.SS.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.IO;
 
@@ -10,13 +16,13 @@ namespace NPOI.Examples.XSSF.HideColumnAndRowInXlsx
         {
             IWorkbook workbook = new XSSFWorkbook();
             ISheet s = workbook.CreateSheet("Sheet1");
-            IRow r1 = s.CreateRow(0);
-            IRow r2 = s.CreateRow(1);
-            IRow r3 = s.CreateRow(2);
-            IRow r4 = s.CreateRow(3);
-            IRow r5 = s.CreateRow(4);
+            for (int i = 0; i < 5; i++)
+            {
+                s.CreateRow(i).CreateCell(0).SetCellValue("Row "+i);
+            }
 
-            //hide IRow 2
+            var r2 = s.GetRow(1);
+            //hide Row 2
             r2.ZeroHeight = true;
 
             //hide column C
