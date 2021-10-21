@@ -19,7 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateOMathFormula", "xwpf\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReplaceTexts", "xwpf\ReplaceTexts\ReplaceTexts.csproj", "{2CD379BB-AAE0-4EE3-A21D-461E4B6DDBE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateHyperlink", "xwpf\CreateHyperlink\CreateHyperlink.csproj", "{9FF75817-7CB4-47A0-8E56-AF8D6BA71F6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateHyperlink", "xwpf\CreateHyperlink\CreateHyperlink.csproj", "{9FF75817-7CB4-47A0-8E56-AF8D6BA71F6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexTableLayout", "xwpf\ComplexTableLayout\ComplexTableLayout.csproj", "{83AED103-1439-4F6D-9300-9F42C3940D49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,6 +129,18 @@ Global
 		{9FF75817-7CB4-47A0-8E56-AF8D6BA71F6E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9FF75817-7CB4-47A0-8E56-AF8D6BA71F6E}.Release|x86.ActiveCfg = Release|Any CPU
 		{9FF75817-7CB4-47A0-8E56-AF8D6BA71F6E}.Release|x86.Build.0 = Release|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Debug|x86.Build.0 = Debug|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Release|x86.ActiveCfg = Release|Any CPU
+		{83AED103-1439-4F6D-9300-9F42C3940D49}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
