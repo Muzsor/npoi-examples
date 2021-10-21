@@ -1,4 +1,10 @@
-﻿using NPOI.OpenXmlFormats.Wordprocessing;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.OpenXmlFormats.Wordprocessing;
 using NPOI.XWPF.UserModel;
 using System;
 using System.IO;

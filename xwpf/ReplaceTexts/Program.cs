@@ -1,4 +1,10 @@
-﻿using NPOI.XWPF.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.XWPF.UserModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
