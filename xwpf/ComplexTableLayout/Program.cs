@@ -29,7 +29,7 @@ namespace ComplexTableLayout
             table2.SetColumnWidth(0, 1500);
             table2.SetColumnWidth(1, 1500);
             table2.SetColumnWidth(2, 1500);
-            table2.GetCTTbl().tblPr.tblpPr = new CT_TblPPr();   //tblPr.AddNewTblPPr will be available since NPOI 2.5.5
+            table2.GetCTTbl().tblPr.AddNewTblPPr(); //tblPr.AddNewTblPPr is available since NPOI 2.5.5
             var tblpPr = table2.GetCTTbl().tblPr.tblpPr;
             tblpPr.leftFromText = 180;
             tblpPr.topFromText = 180;
