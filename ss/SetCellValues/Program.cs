@@ -2,6 +2,13 @@
 using NPOI.XSSF.UserModel;
 using System.IO;
 
+/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+
 namespace NPOI.Examples.XSSF.SetCellValuesInXlsx
 {
     class Program

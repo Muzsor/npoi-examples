@@ -1,4 +1,10 @@
-﻿using NPOI.OpenXmlFormats.Shared;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.OpenXmlFormats.Shared;
 using NPOI.XWPF.UserModel;
 using System.IO;
 

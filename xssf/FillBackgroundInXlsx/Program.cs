@@ -1,4 +1,10 @@
-﻿using NPOI.SS.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.IO;
 
@@ -132,9 +138,10 @@ namespace NPOI.Examples.XSSF.FillBackgroundInXlsx
             style17.FillBackgroundColor = IndexedColors.Yellow.Index;
             sheet1.CreateRow(16).CreateCell(0).CellStyle = style17;
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

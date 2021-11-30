@@ -1,4 +1,10 @@
-﻿using NPOI.HSSF.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System;
@@ -63,9 +69,10 @@ namespace NPOI.Examples.XSSF.DataFormatsInXlsx
             ICell cell10 = sheet.CreateRow(9).CreateCell(0);
             SetValueAndFormat(workbook, cell10, DateTime.Now, format.GetFormat("[$-409]h:mm:ss AM/PM;@"));
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
         static void SetValueAndFormat(IWorkbook workbook, ICell cell, int value, short formatId)
         {

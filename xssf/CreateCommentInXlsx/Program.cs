@@ -1,4 +1,10 @@
-﻿using NPOI.HSSF.Util;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.HSSF.Util;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System.IO;
@@ -64,9 +70,10 @@ namespace NPOI.Examples.XSSF.CreateCommentInXlsx
             comment2.Row = 6;
             comment2.Column = 1;
 
-            FileStream sw = File.Create("test.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+            using (FileStream sw = File.Create("test.xlsx"))
+            {
+                workbook.Write(sw);
+            }
         }
     }
 }

@@ -1,4 +1,10 @@
-﻿using NPOI.OpenXml4Net.OPC;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.OpenXml4Net.OPC;
 using NPOI.SS.UserModel;
 using NPOI.XWPF.UserModel;
 using NUnit.Framework;

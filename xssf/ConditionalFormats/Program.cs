@@ -1,4 +1,10 @@
-﻿using NPOI.SS.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.SS.UserModel;
 using NPOI.SS.Util;
 using NPOI.XSSF.UserModel;
 using System.IO;
@@ -21,9 +27,9 @@ namespace ConditionalFormats
             ShadeAlt(wb.CreateSheet("Shade Alt"));
             ShadeBands(wb.CreateSheet("Shade Bands"));
 
-            using (var fs = File.Create("test.xlsx"))
+            using (var sw = File.Create("test.xlsx"))
             {
-                wb.Write(fs);
+                wb.Write(sw);
             }
         }
         /**

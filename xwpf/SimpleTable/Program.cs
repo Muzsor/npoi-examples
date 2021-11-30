@@ -1,4 +1,10 @@
-﻿using NPOI.XWPF.UserModel;
+﻿/* ================================================================
+ * Author: Tony Qu 
+ * Author's email: tonyqus (at) gmail.com 
+ * NPOI Examples: https://github.com/nissl-lab/npoi-examples
+ * ==============================================================*/
+
+using NPOI.XWPF.UserModel;
 using System.IO;
 
 namespace SimpleTable
@@ -31,10 +37,19 @@ namespace SimpleTable
             c1.SetColor("FF0000");
             
             table.GetRow(2).GetCell(2).SetText("only text");
+            var r2=table.GetRow(2).GetCell(0).AddParagraph().CreateRun();
+            var widthEmus = (int)(400.0 * 9525);
+            var heightEmus = (int)(300.0 * 9525);
 
-            FileStream out1 = new FileStream("simpleTable.docx", FileMode.Create);
-            doc.Write(out1);
-            out1.Close();
+            using (FileStream picData = new FileStream("image/HumpbackWhale.jpg", FileMode.Open, FileAccess.Read))
+            {
+                r2.AddPicture(picData, (int)PictureType.JPEG, "image1", widthEmus, heightEmus);
+            }
+
+            using (FileStream fs = new FileStream("simpleTable.docx", FileMode.Create))
+            {
+                doc.Write(fs);
+            }
         }
     }
 }
