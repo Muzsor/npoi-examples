@@ -3,65 +3,65 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateEmptyWorkbook", "xssf\CreateEmptyWorkbook\CreateEmptyWorkbook.csproj", "{AFBE86E3-EDBE-45B4-8950-8B883102A47F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateEmptyWorkbook", "CreateEmptyWorkbook\CreateEmptyWorkbook.csproj", "{AFBE86E3-EDBE-45B4-8950-8B883102A47F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetWidthAndHeightInXlsx", "xssf\SetWidthAndHeightInXlsx\SetWidthAndHeightInXlsx.csproj", "{D94F543E-F925-44F5-9347-A6DC96D58F17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetWidthAndHeightInXlsx", "SetWidthAndHeightInXlsx\SetWidthAndHeightInXlsx.csproj", "{D94F543E-F925-44F5-9347-A6DC96D58F17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillBackgroundInXlsx", "xssf\FillBackgroundInXlsx\FillBackgroundInXlsx.csproj", "{B6485025-FA2D-4BFB-A98A-A7AE95582EE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillBackgroundInXlsx", "FillBackgroundInXlsx\FillBackgroundInXlsx.csproj", "{B6485025-FA2D-4BFB-A98A-A7AE95582EE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFormatsInXlsx", "xssf\DataFormatsInXlsx\DataFormatsInXlsx.csproj", "{4FDDC7EA-AA4C-429B-A579-39C89B522ACF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFormatsInXlsx", "DataFormatsInXlsx\DataFormatsInXlsx.csproj", "{4FDDC7EA-AA4C-429B-A579-39C89B522ACF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateHeaderFooterInXlsx", "xssf\CreateHeaderFooterInXlsx\CreateHeaderFooterInXlsx.csproj", "{0E707837-B595-4F19-B3DB-69959A3DC10F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateHeaderFooterInXlsx", "CreateHeaderFooterInXlsx\CreateHeaderFooterInXlsx.csproj", "{0E707837-B595-4F19-B3DB-69959A3DC10F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitAndFreezePanesInXlsx", "xssf\SplitAndFreezePanesInXlsx\SplitAndFreezePanesInXlsx.csproj", "{7A0D486D-9BB8-49BE-9DE7-28027B1C5ADA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitAndFreezePanesInXlsx", "SplitAndFreezePanesInXlsx\SplitAndFreezePanesInXlsx.csproj", "{7A0D486D-9BB8-49BE-9DE7-28027B1C5ADA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideColumnAndRowInXlsx", "xssf\HideColumnAndRowInXlsx\HideColumnAndRowInXlsx.csproj", "{A99CBC67-2CD6-40BC-8316-E270404385B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HideColumnAndRowInXlsx", "HideColumnAndRowInXlsx\HideColumnAndRowInXlsx.csproj", "{A99CBC67-2CD6-40BC-8316-E270404385B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorderStylesInXlsx", "xssf\BorderStylesInXlsx\BorderStylesInXlsx.csproj", "{7FEF327E-BD06-4A68-9B7C-60A3FD38152F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorderStylesInXlsx", "BorderStylesInXlsx\BorderStylesInXlsx.csproj", "{7FEF327E-BD06-4A68-9B7C-60A3FD38152F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCommentInXlsx", "xssf\CreateCommentInXlsx\CreateCommentInXlsx.csproj", "{AC14631B-A377-4BFE-86DA-FF70EC3B278A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCommentInXlsx", "CreateCommentInXlsx\CreateCommentInXlsx.csproj", "{AC14631B-A377-4BFE-86DA-FF70EC3B278A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectSheetInXlsx", "xssf\ProtectSheetInXlsx\ProtectSheetInXlsx.csproj", "{72A01500-36B4-4CAD-9A87-F6D696C9F978}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectSheetInXlsx", "ProtectSheetInXlsx\ProtectSheetInXlsx.csproj", "{72A01500-36B4-4CAD-9A87-F6D696C9F978}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertPicturesInXlsx", "xssf\InsertPicturesInXlsx\InsertPicturesInXlsx.csproj", "{4A81D589-4CE6-474D-AEC9-1AA3ABC2F8B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertPicturesInXlsx", "InsertPicturesInXlsx\InsertPicturesInXlsx.csproj", "{4A81D589-4CE6-474D-AEC9-1AA3ABC2F8B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddHyperlinkInXlsx", "xssf\AddHyperlinkInXlsx\AddHyperlinkInXlsx.csproj", "{36AEA430-A127-4510-BE7B-2F616F67B10F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddHyperlinkInXlsx", "AddHyperlinkInXlsx\AddHyperlinkInXlsx.csproj", "{36AEA430-A127-4510-BE7B-2F616F67B10F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyFontInXlsx", "xssf\ApplyFontInXlsx\ApplyFontInXlsx.csproj", "{BFAF8A3E-ACE7-4FBE-8841-F95F6BB55271}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyFontInXlsx", "ApplyFontInXlsx\ApplyFontInXlsx.csproj", "{BFAF8A3E-ACE7-4FBE-8841-F95F6BB55271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageSetupInXlsx", "xssf\PageSetupInXlsx\PageSetupInXlsx.csproj", "{60832BAC-1927-40A9-A9A7-6E9A4FD2CE87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageSetupInXlsx", "PageSetupInXlsx\PageSetupInXlsx.csproj", "{60832BAC-1927-40A9-A9A7-6E9A4FD2CE87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScatterChart", "xssf\ScatterChart\ScatterChart.csproj", "{421AEE65-B2DB-4633-A5E1-97E9DC809ADE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScatterChart", "ScatterChart\ScatterChart.csproj", "{421AEE65-B2DB-4633-A5E1-97E9DC809ADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigGridTest", "xssf\BigGridTest\BigGridTest.csproj", "{ED6DC363-2017-4004-AF44-2AA171709EFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigGridTest", "BigGridTest\BigGridTest.csproj", "{ED6DC363-2017-4004-AF44-2AA171709EFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintSetupInXlsx", "xssf\PrintSetupInXlsx\PrintSetupInXlsx.csproj", "{01EF30FD-3D95-4EE4-AFE7-16EAB36649B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintSetupInXlsx", "PrintSetupInXlsx\PrintSetupInXlsx.csproj", "{01EF30FD-3D95-4EE4-AFE7-16EAB36649B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritePerformanceTest", "xssf\WritePerformanceTest\WritePerformanceTest.csproj", "{87009589-28B8-4F63-A50D-A0C599E01A1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritePerformanceTest", "WritePerformanceTest\WritePerformanceTest.csproj", "{87009589-28B8-4F63-A50D-A0C599E01A1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomProperties", "xssf\CreateCustomProperties\CreateCustomProperties.csproj", "{BABCE350-9EC0-4EE7-A8E5-7CC73CA5E667}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCustomProperties", "CreateCustomProperties\CreateCustomProperties.csproj", "{BABCE350-9EC0-4EE7-A8E5-7CC73CA5E667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadXlsx", "xssf\DownloadXlsx\DownloadXlsx.csproj", "{4C8B6A62-F77D-477F-9A60-C8C8098AC2E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadXlsx", "DownloadXlsx\DownloadXlsx.csproj", "{4C8B6A62-F77D-477F-9A60-C8C8098AC2E1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Performance", "Performance", "{FB96FC42-FB38-4F3B-9BA2-ACE24653CE0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalFormats", "xssf\ConditionalFormats\ConditionalFormats.csproj", "{CFA33A5A-DA93-48BE-B513-6FCDA5447B9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalFormats", "ConditionalFormats\ConditionalFormats.csproj", "{CFA33A5A-DA93-48BE-B513-6FCDA5447B9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basic", "Basic", "{CD941EF6-8FB7-467D-8AE7-0C85E07BD53F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chart", "Chart", "{8CFB89FD-C679-473B-B421-D7EC19D7FC4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineChart", "xssf\LineChart\LineChart.csproj", "{A429FB81-425D-4046-92B5-CBE0FBC9AA3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineChart", "LineChart\LineChart.csproj", "{A429FB81-425D-4046-92B5-CBE0FBC9AA3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractPicturesFromXlsx", "xssf\ExtractPicturesFromXlsx\ExtractPicturesFromXlsx.csproj", "{ACEDDD5E-EEFF-4A59-ABB4-F70C58B8E644}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractPicturesFromXlsx", "ExtractPicturesFromXlsx\ExtractPicturesFromXlsx.csproj", "{ACEDDD5E-EEFF-4A59-ABB4-F70C58B8E644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetRowStyle", "xssf\SetRowStyle\SetRowStyle.csproj", "{E628794B-F889-4462-BACD-8531A1F4AEEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetRowStyle", "SetRowStyle\SetRowStyle.csproj", "{E628794B-F889-4462-BACD-8531A1F4AEEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetIsRightToLeftInXlsx", "xssf\SetIsRightToLeftInXlsx\SetIsRightToLeftInXlsx.csproj", "{4D81B9A9-14B6-4506-A7F4-59289886D822}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetIsRightToLeftInXlsx", "SetIsRightToLeftInXlsx\SetIsRightToLeftInXlsx.csproj", "{4D81B9A9-14B6-4506-A7F4-59289886D822}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopySheet", "xssf\CopySheet\CopySheet.csproj", "{896CF801-6B19-42DF-920B-D92ED8B0449D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopySheet", "CopySheet\CopySheet.csproj", "{896CF801-6B19-42DF-920B-D92ED8B0449D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarChart", "xssf\BarChart\BarChart.csproj", "{49B4A4CB-DC0D-4A97-B2BD-07029F870004}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarChart", "BarChart\BarChart.csproj", "{49B4A4CB-DC0D-4A97-B2BD-07029F870004}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
