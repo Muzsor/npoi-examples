@@ -27,7 +27,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseBasicFormula", "UseBasic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultplicationTable", "MultplicationTable\MultplicationTable.csproj", "{0183662A-B1B4-4E65-916E-C2FB397B8A3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadAndPrintData", "ReadAndPrintData\ReadAndPrintData.csproj", "{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadAndPrintData", "ReadAndPrintData\ReadAndPrintData.csproj", "{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SetPrintArea", "SetPrintArea\SetPrintArea.csproj", "{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,14 @@ Global
 		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|x86.ActiveCfg = Release|Any CPU
 		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|x86.Build.0 = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
