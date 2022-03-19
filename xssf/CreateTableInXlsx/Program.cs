@@ -1,4 +1,5 @@
-﻿using NPOI.OpenXmlFormats.Spreadsheet;
+﻿using NPOI.OOXML.XSSF.UserModel;
+using NPOI.OpenXmlFormats.Spreadsheet;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using System;
@@ -17,21 +18,20 @@ namespace CreateTableInXlsx
             //create the table in sheet
             var table = sheet.CreateTable();
             table.Name = "Test";
-            var cttable = table.GetCTTable();
-            cttable.displayName= "Table1";
-            cttable.id= 1;
-            cttable.@ref ="A1:C5";
-            cttable.totalsRowShown =false;
+            var ctTable=table.GetCTTable();
+            ctTable.id = 1;
+            table.IsHasTotalsRow = false;
+            table.DisplayName = "Table1";
+            table.SetCellReferences(new NPOI.SS.Util.AreaReference("A1:C5", NPOI.SS.SpreadsheetVersion.EXCEL2007));
 
-            var styleInfo = cttable.tableStyleInfo = new CT_TableStyleInfo();
-            styleInfo.name ="TableStyleMedium2";
-            styleInfo.showColumnStripes =false;
-            styleInfo.showRowStripes =true;
-            cttable.tableColumns = new CT_TableColumns();
-            cttable.tableColumns.tableColumn = new List<CT_TableColumn>();
-            cttable.tableColumns.tableColumn.Add(new CT_TableColumn() { id = 1 });
-            cttable.tableColumns.tableColumn.Add(new CT_TableColumn() { id = 2 });
-            cttable.tableColumns.tableColumn.Add(new CT_TableColumn() { id = 3 });
+            table.CreateColumn(null, 0);
+            table.CreateColumn(null, 1);
+            table.CreateColumn(null, 2);
+            table.StyleName = XSSFBuiltinTableStyleEnum.TableStyleMedium27.ToString();
+
+
+            table.Style.IsShowColumnStripes = false;
+            table.Style.IsShowRowStripes = true;
 
             //fill in the data
             for (int r = 0; r < 5; r++)
