@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NPOI" Version="2.5.3" />
-    <PackageReference Include="SharpZipLib" Version="1.2.0" />
+    <PackageReference Include="NPOI" Version="2.5.6" />
   </ItemGroup>
 
   <ItemGroup>
