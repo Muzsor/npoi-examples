@@ -21,7 +21,7 @@ namespace CreateTableInXlsx
             table.DisplayName = "Table1";
             table.SetCellReferences(new NPOI.SS.Util.AreaReference("A1:C5", NPOI.SS.SpreadsheetVersion.EXCEL2007));
 
-            //CreateColumn method is available since NPOI 2.5.6
+            //CreateColumn method is available since NPOI 2.6.0
             table.CreateColumn(null, 0);
             table.CreateColumn(null, 1);
             table.CreateColumn(null, 2);
