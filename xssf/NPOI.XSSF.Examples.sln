@@ -67,6 +67,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateTableInXlsx", "Create
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateWorkbookFromDataSet", "CreateWorkbookFromDataSet\CreateWorkbookFromDataSet.csproj", "{18C906BF-600D-4A63-95FD-69736A5E3F54}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertRowInExistingSheet", "InsertRowInExistingSheet\InsertRowInExistingSheet.csproj", "{8C821D14-DDC3-432C-9D90-9678C71B0857}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -377,6 +379,18 @@ Global
 		{18C906BF-600D-4A63-95FD-69736A5E3F54}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{18C906BF-600D-4A63-95FD-69736A5E3F54}.Release|x86.ActiveCfg = Release|Any CPU
 		{18C906BF-600D-4A63-95FD-69736A5E3F54}.Release|x86.Build.0 = Release|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
