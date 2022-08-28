@@ -3,31 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessPlan", "ss\BusinessPlan\BusinessPlan.csproj", "{74D83AE1-DE01-4C88-B593-DAC1F37BB6FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessPlan", "BusinessPlan\BusinessPlan.csproj", "{74D83AE1-DE01-4C88-B593-DAC1F37BB6FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarDemo", "ss\CalendarDemo\CalendarDemo.csproj", "{D964F8B6-8945-4D31-8036-1E034AA27F7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarDemo", "CalendarDemo\CalendarDemo.csproj", "{D964F8B6-8945-4D31-8036-1E034AA27F7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanCalculator", "ss\LoanCalculator\LoanCalculator.csproj", "{1B2891A4-BD05-47E0-96FF-DAE36F220C6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanCalculator", "LoanCalculator\LoanCalculator.csproj", "{1B2891A4-BD05-47E0-96FF-DAE36F220C6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSheetDemo", "ss\TimeSheetDemo\TimeSheetDemo.csproj", "{9B188700-1713-4022-92C4-C0E2AA57AA3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSheetDemo", "TimeSheetDemo\TimeSheetDemo.csproj", "{9B188700-1713-4022-92C4-C0E2AA57AA3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorfulMatrixTable", "ss\ColorfulMatrixTable\ColorfulMatrixTable.csproj", "{727632C0-1983-4943-AD09-6347F74BBE85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorfulMatrixTable", "ColorfulMatrixTable\ColorfulMatrixTable.csproj", "{727632C0-1983-4943-AD09-6347F74BBE85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkbookFactoryDemo", "ss\WorkbookFactoryDemo\WorkbookFactoryDemo.csproj", "{E5DAEB44-BA83-4F8E-BCF2-0050FC5110AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkbookFactoryDemo", "WorkbookFactoryDemo\WorkbookFactoryDemo.csproj", "{E5DAEB44-BA83-4F8E-BCF2-0050FC5110AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlySalaryReport", "ss\MonthlySalaryReport\MonthlySalaryReport.csproj", "{AAAED0B0-1797-464C-8DF6-96DEBFB57DE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlySalaryReport", "MonthlySalaryReport\MonthlySalaryReport.csproj", "{AAAED0B0-1797-464C-8DF6-96DEBFB57DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedDropDownLists", "ss\LinkedDropDownLists\LinkedDropDownLists.csproj", "{A1C0DE12-A626-431F-B2E1-DB4B3A706383}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedDropDownLists", "LinkedDropDownLists\LinkedDropDownLists.csproj", "{A1C0DE12-A626-431F-B2E1-DB4B3A706383}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergingCells", "ss\MeringCells\MergingCells.csproj", "{E370B5B7-8679-4FBA-BB7B-EDD035245F03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergingCells", "MeringCells\MergingCells.csproj", "{E370B5B7-8679-4FBA-BB7B-EDD035245F03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetCellValues", "ss\SetCellValues\SetCellValues.csproj", "{D49F896A-A2E1-4C28-ACB7-73FB2910626D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetCellValues", "SetCellValues\SetCellValues.csproj", "{D49F896A-A2E1-4C28-ACB7-73FB2910626D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseBasicFormula", "ss\UseBasicFormula\UseBasicFormula.csproj", "{874E25C5-3ECE-4772-90C1-C857AF4C7568}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseBasicFormula", "UseBasicFormula\UseBasicFormula.csproj", "{874E25C5-3ECE-4772-90C1-C857AF4C7568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultplicationTable", "ss\MultplicationTable\MultplicationTable.csproj", "{0183662A-B1B4-4E65-916E-C2FB397B8A3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultplicationTable", "MultplicationTable\MultplicationTable.csproj", "{0183662A-B1B4-4E65-916E-C2FB397B8A3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadAndPrintData", "ss\ReadAndPrintData\ReadAndPrintData.csproj", "{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadAndPrintData", "ReadAndPrintData\ReadAndPrintData.csproj", "{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SetPrintArea", "SetPrintArea\SetPrintArea.csproj", "{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,14 @@ Global
 		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|x86.ActiveCfg = Release|Any CPU
 		{FC1BD676-0830-43EF-B4B7-4A2A8900F60E}.Release|x86.Build.0 = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B878F82-CCA3-498A-95DC-EE1B3BA39AE2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

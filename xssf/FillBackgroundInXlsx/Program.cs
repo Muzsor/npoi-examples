@@ -138,9 +138,37 @@ namespace NPOI.Examples.XSSF.FillBackgroundInXlsx
             style17.FillBackgroundColor = IndexedColors.Yellow.Index;
             sheet1.CreateRow(16).CreateCell(0).CellStyle = style17;
 
+            //fill background with gradient color, this only works with NPOI 2.6.0
+            XSSFCellStyle style18 = (XSSFCellStyle)workbook.CreateCellStyle();
+            style18.FillPattern = FillPattern.SolidForeground;
+            var fillidx=(int)style18.GetCoreXf().fillId;
+            var ctfill = ((XSSFWorkbook)workbook).GetStylesSource().GetFillAt(fillidx).GetCTFill();
+            ctfill.UnsetPatternFill();
+            byte[] rgb1 = new byte[3];
+            rgb1[0] = (byte)0; // red
+            rgb1[1] = (byte)0; // green
+            rgb1[2] = (byte)255; // blue
+
+            byte[] rgb2 = new byte[3];
+            rgb2[0] = (byte)255; // red
+            rgb2[1] = (byte)255; // green
+            rgb2[2] = (byte)255; // blue
+
+            ctfill.gradientFill = new OpenXmlFormats.Spreadsheet.CT_GradientFill();
+            var ctgradientfill = ctfill.gradientFill;
+            ctgradientfill.degree =90;
+            ctgradientfill.AddNewStop().position = 0;
+            ctgradientfill.GetStopArray(0).AddNewColor().SetRgb(rgb1);
+            ctgradientfill.AddNewStop().position = 0.5;
+            ctgradientfill.GetStopArray(1).AddNewColor().SetRgb(rgb2);
+            ctgradientfill.AddNewStop().position = 1.0;
+            ctgradientfill.GetStopArray(2).AddNewColor().SetRgb(rgb1);
+
+            sheet1.CreateRow(16).CreateCell(0).CellStyle = style18;
+
             using (FileStream sw = File.Create("test.xlsx"))
             {
-                workbook.Write(sw);
+                workbook.Write(sw, false);
             }
         }
     }

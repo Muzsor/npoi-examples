@@ -7,6 +7,7 @@ namespace ReadAndPrintData
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             var workbook = WorkbookFactory.Create("data.xlsx");
             ISheet sheet = workbook.GetSheetAt(0);
             foreach (IRow row in sheet)
