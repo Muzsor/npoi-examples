@@ -2,6 +2,9 @@
 
 This repository is splitted from [NPOI master repository](https://github.com/nissl-lab/npoi) in order to manage the examples easily.
 
+# About Donation
+Since Github sponsorship is not supported in China so far, it's hard to get donation from Github channel. I'm strictly limiting my contribution time on NPOI these 2 years although it looks to be still maintained well. If you profits/benefits from NPOI and you believe it's useful, please [donate this project](https://github.com/nissl-lab/npoi/discussions/923). Thank you!
+
 # Telegram User Group
 Join us on telegram: https://t.me/npoidevs
 
