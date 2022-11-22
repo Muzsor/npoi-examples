@@ -71,7 +71,7 @@ namespace NPOI.Examples.XSSF.DataFormatsInXlsx
 
             using (FileStream sw = File.Create("test.xlsx"))
             {
-                workbook.Write(sw);
+                workbook.Write(sw, false);
             }
         }
         static void SetValueAndFormat(IWorkbook workbook, ICell cell, int value, short formatId)
