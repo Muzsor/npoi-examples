@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30002.166
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateEmptyWorkbook", "CreateEmptyWorkbook\CreateEmptyWorkbook.csproj", "{AFBE86E3-EDBE-45B4-8950-8B883102A47F}"
 EndProject
@@ -68,6 +68,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateWorkbookFromDataSet", "CreateWorkbookFromDataSet\CreateWorkbookFromDataSet.csproj", "{18C906BF-600D-4A63-95FD-69736A5E3F54}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertRowInExistingSheet", "InsertRowInExistingSheet\InsertRowInExistingSheet.csproj", "{8C821D14-DDC3-432C-9D90-9678C71B0857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillDateOnlyValue", "FillDateOnlyValue\FillDateOnlyValue.csproj", "{658190EE-EE39-42DE-84D7-989A4A1059E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -391,6 +393,18 @@ Global
 		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|x86.ActiveCfg = Release|Any CPU
 		{8C821D14-DDC3-432C-9D90-9678C71B0857}.Release|x86.Build.0 = Release|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Debug|x86.Build.0 = Debug|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
