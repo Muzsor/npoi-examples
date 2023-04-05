@@ -44,31 +44,33 @@ namespace LineChart
 
         static void Main(string[] args)
         {
-            IWorkbook wb = new XSSFWorkbook();
-            ISheet sheet = wb.CreateSheet("linechart");
-
-
-            // Create a row and put some cells in it. Rows are 0 based.
-            IRow row;
-            ICell cell;
-            for (int rowIndex = 0; rowIndex < NUM_OF_ROWS; rowIndex++)
+            using (IWorkbook wb = new XSSFWorkbook())
             {
-                row = sheet.CreateRow((short)rowIndex);
-                for (int colIndex = 0; colIndex < NUM_OF_COLUMNS; colIndex++)
+                ISheet sheet = wb.CreateSheet("linechart");
+
+
+                // Create a row and put some cells in it. Rows are 0 based.
+                IRow row;
+                ICell cell;
+                for (int rowIndex = 0; rowIndex < NUM_OF_ROWS; rowIndex++)
                 {
-                    cell = row.CreateCell((short)colIndex);
-                    cell.SetCellValue(colIndex * (rowIndex + 1));
+                    row = sheet.CreateRow((short)rowIndex);
+                    for (int colIndex = 0; colIndex < NUM_OF_COLUMNS; colIndex++)
+                    {
+                        cell = row.CreateCell((short)colIndex);
+                        cell.SetCellValue(colIndex * (rowIndex + 1));
+                    }
                 }
-            }
 
-            IDrawing drawing = sheet.CreateDrawingPatriarch();
-            IClientAnchor anchor1 = drawing.CreateAnchor(0, 0, 0, 0, 0, 5, 10, 15);
-            CreateChart(drawing, sheet, anchor1, "title1", "title2");
-            IClientAnchor anchor2 = drawing.CreateAnchor(0, 0, 0, 0, 0, 20, 10, 35);
-            CreateChart(drawing, sheet, anchor2, "s1", "s2", true);
-            using (FileStream fs = File.Create("test.xlsx"))
-            {
-                wb.Write(fs);
+                IDrawing drawing = sheet.CreateDrawingPatriarch();
+                IClientAnchor anchor1 = drawing.CreateAnchor(0, 0, 0, 0, 0, 5, 10, 15);
+                CreateChart(drawing, sheet, anchor1, "title1", "title2");
+                IClientAnchor anchor2 = drawing.CreateAnchor(0, 0, 0, 0, 0, 20, 10, 35);
+                CreateChart(drawing, sheet, anchor2, "s1", "s2", true);
+                using (FileStream fs = File.Create("test.xlsx"))
+                {
+                    wb.Write(fs, false);
+                }
             }
         }
     }

@@ -35,35 +35,37 @@ namespace BarChart
         }
         static void Main(string[] args)
         {
-            IWorkbook wb = new XSSFWorkbook();
-            ISheet sheet = wb.CreateSheet();
-
-
-            // Create a row and put some cells in it. Rows are 0 based.
-            IRow row;
-            ICell cell;
-            for (int rowIndex = 0; rowIndex < NUM_OF_ROWS; rowIndex++)
+            using (IWorkbook wb = new XSSFWorkbook())
             {
-                row = sheet.CreateRow((short)rowIndex);
-                for (int colIndex = 0; colIndex < NUM_OF_COLUMNS; colIndex++)
+                ISheet sheet = wb.CreateSheet();
+
+
+                // Create a row and put some cells in it. Rows are 0 based.
+                IRow row;
+                ICell cell;
+                for (int rowIndex = 0; rowIndex < NUM_OF_ROWS; rowIndex++)
                 {
-                    cell = row.CreateCell((short)colIndex);
-                    if (colIndex == 0)
-                        cell.SetCellValue("X" + rowIndex);
-                    else
+                    row = sheet.CreateRow((short)rowIndex);
+                    for (int colIndex = 0; colIndex < NUM_OF_COLUMNS; colIndex++)
                     {
-                        var x = colIndex * (rowIndex + 1);
-                        cell.SetCellValue(x*x+2*x+1);
+                        cell = row.CreateCell((short)colIndex);
+                        if (colIndex == 0)
+                            cell.SetCellValue("X" + rowIndex);
+                        else
+                        {
+                            var x = colIndex * (rowIndex + 1);
+                            cell.SetCellValue(x * x + 2 * x + 1);
+                        }
                     }
                 }
-            }
-            XSSFDrawing drawing = (XSSFDrawing)sheet.CreateDrawingPatriarch();
-            XSSFClientAnchor anchor = (XSSFClientAnchor)drawing.CreateAnchor(0, 0, 0, 0, 3, 3, 10, 12);
+                XSSFDrawing drawing = (XSSFDrawing)sheet.CreateDrawingPatriarch();
+                XSSFClientAnchor anchor = (XSSFClientAnchor)drawing.CreateAnchor(0, 0, 0, 0, 3, 3, 10, 12);
 
-            CreateChart(sheet,drawing, anchor, "s1", 0, 9, 1);
-            using (FileStream fs = File.Create("test.xlsx"))
-            {
-                wb.Write(fs);
+                CreateChart(sheet, drawing, anchor, "s1", 0, 9, 1);
+                using (FileStream fs = File.Create("test.xlsx"))
+                {
+                    wb.Write(fs, false);
+                }
             }
         }
     }
