@@ -82,9 +82,10 @@ namespace MultplicationTableInXls
         static void WriteToFile()
         {
             //Write the stream data of workbook to the root directory
-            FileStream file = new FileStream(@"test.xls", FileMode.Create);
-            workbook.Write(file);
-            file.Close();
+            using (FileStream file = new FileStream(@"test.xls", FileMode.Create))
+            {
+                workbook.Write(file, false);
+            }
         }
     }
 }

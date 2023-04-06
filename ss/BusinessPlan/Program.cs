@@ -229,10 +229,9 @@ namespace BusinessPlan
             // Write the output to a file
             String file = "businessplan.xls";
             if (wb is XSSFWorkbook) file += "x";
-            using (FileStream out1 = new FileStream(file, FileMode.Create))
+            using (FileStream fs = new FileStream(file, FileMode.Create))
             {
-                wb.Write(out1);
-                out1.Close();
+                wb.Write(fs, false);
             }
 
         }

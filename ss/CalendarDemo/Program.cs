@@ -41,97 +41,98 @@ namespace CalendarDemo
             }
             int year = dt.Year;
 
-            IWorkbook wb = xlsx ? new XSSFWorkbook() as IWorkbook : new HSSFWorkbook() as IWorkbook;
-
-            Dictionary<String, ICellStyle> styles = CreateStyles(wb);
-            DateTime dtM;
-            for (int month = 0; month < 12; month++)
+            using (IWorkbook wb = xlsx ? new XSSFWorkbook() as IWorkbook : new HSSFWorkbook() as IWorkbook)
             {
-                dtM = new DateTime(dt.Year, month + 1, 1);
-                //calendar.set(Calendar.MONTH, month);
-                //calendar.set(Calendar.DAY_OF_MONTH, 1);
-                //create a sheet for each month
-                ISheet sheet = wb.CreateSheet(months[month]);
-
-                //turn off gridlines
-                sheet.DisplayGridlines = (false);
-                sheet.IsPrintGridlines = (false);
-                sheet.FitToPage = (true);
-                sheet.HorizontallyCenter = (true);
-                IPrintSetup printSetup = sheet.PrintSetup;
-                printSetup.Landscape = (true);
-
-                //the following three statements are required only for HSSF
-                sheet.Autobreaks = (true);
-                printSetup.FitHeight = ((short)1);
-                printSetup.FitWidth = ((short)1);
-
-                //the header row: centered text in 48pt font
-                IRow headerRow = sheet.CreateRow(0);
-                headerRow.HeightInPoints = (80);
-                ICell titleCell = headerRow.CreateCell(0);
-                titleCell.SetCellValue(months[month] + " " + year);
-                titleCell.CellStyle = (styles[("title")]);
-                sheet.AddMergedRegion(CellRangeAddress.ValueOf("$A$1:$N$1"));
-
-                //header with month titles
-                IRow monthRow = sheet.CreateRow(1);
-                for (int i = 0; i < days.Length; i++)
+                Dictionary<String, ICellStyle> styles = CreateStyles(wb);
+                DateTime dtM;
+                for (int month = 0; month < 12; month++)
                 {
-                    //set column widths, the width is measured in units of 1/256th of a character width
-                    sheet.SetColumnWidth(i * 2, 5 * 256); //the column is 5 characters wide
-                    sheet.SetColumnWidth(i * 2 + 1, 13 * 256); //the column is 13 characters wide
-                    sheet.AddMergedRegion(new CellRangeAddress(1, 1, i * 2, i * 2 + 1));
-                    ICell monthCell = monthRow.CreateCell(i * 2);
-                    monthCell.SetCellValue(days[i]);
-                    monthCell.CellStyle = (styles["month"]);
-                }
+                    dtM = new DateTime(dt.Year, month + 1, 1);
+                    //calendar.set(Calendar.MONTH, month);
+                    //calendar.set(Calendar.DAY_OF_MONTH, 1);
+                    //create a sheet for each month
+                    ISheet sheet = wb.CreateSheet(months[month]);
 
-                int cnt = 1, day = 1;
-                int rownum = 2;
-                for (int j = 0; j < 6; j++)
-                {
-                    IRow row = sheet.CreateRow(rownum++);
-                    row.HeightInPoints = (100);
+                    //turn off gridlines
+                    sheet.DisplayGridlines = (false);
+                    sheet.IsPrintGridlines = (false);
+                    sheet.FitToPage = (true);
+                    sheet.HorizontallyCenter = (true);
+                    IPrintSetup printSetup = sheet.PrintSetup;
+                    printSetup.Landscape = (true);
+
+                    //the following three statements are required only for HSSF
+                    sheet.Autobreaks = (true);
+                    printSetup.FitHeight = ((short)1);
+                    printSetup.FitWidth = ((short)1);
+
+                    //the header row: centered text in 48pt font
+                    IRow headerRow = sheet.CreateRow(0);
+                    headerRow.HeightInPoints = (80);
+                    ICell titleCell = headerRow.CreateCell(0);
+                    titleCell.SetCellValue(months[month] + " " + year);
+                    titleCell.CellStyle = (styles[("title")]);
+                    sheet.AddMergedRegion(CellRangeAddress.ValueOf("$A$1:$N$1"));
+
+                    //header with month titles
+                    IRow monthRow = sheet.CreateRow(1);
                     for (int i = 0; i < days.Length; i++)
                     {
-                        ICell dayCell_1 = row.CreateCell(i * 2);
-                        ICell dayCell_2 = row.CreateCell(i * 2 + 1);
+                        //set column widths, the width is measured in units of 1/256th of a character width
+                        sheet.SetColumnWidth(i * 2, 5 * 256); //the column is 5 characters wide
+                        sheet.SetColumnWidth(i * 2 + 1, 13 * 256); //the column is 13 characters wide
+                        sheet.AddMergedRegion(new CellRangeAddress(1, 1, i * 2, i * 2 + 1));
+                        ICell monthCell = monthRow.CreateCell(i * 2);
+                        monthCell.SetCellValue(days[i]);
+                        monthCell.CellStyle = (styles["month"]);
+                    }
 
-                        int day_of_week = (int)dtM.DayOfWeek;
-                        if (cnt >= day_of_week+1 && dtM.Month == (month + 1))
+                    int cnt = 1, day = 1;
+                    int rownum = 2;
+                    for (int j = 0; j < 6; j++)
+                    {
+                        IRow row = sheet.CreateRow(rownum++);
+                        row.HeightInPoints = (100);
+                        for (int i = 0; i < days.Length; i++)
                         {
-                            dayCell_1.SetCellValue(day++);
+                            ICell dayCell_1 = row.CreateCell(i * 2);
+                            ICell dayCell_2 = row.CreateCell(i * 2 + 1);
 
-                            if (i == 0 || i == days.Length - 1)
+                            int day_of_week = (int)dtM.DayOfWeek;
+                            if (cnt >= day_of_week + 1 && dtM.Month == (month + 1))
                             {
-                                dayCell_1.CellStyle = styles["weekend_left"];
-                                dayCell_2.CellStyle = styles["weekend_right"];
+                                dayCell_1.SetCellValue(day++);
+
+                                if (i == 0 || i == days.Length - 1)
+                                {
+                                    dayCell_1.CellStyle = styles["weekend_left"];
+                                    dayCell_2.CellStyle = styles["weekend_right"];
+                                }
+                                else
+                                {
+                                    dayCell_1.CellStyle = styles["workday_left"];
+                                    dayCell_2.CellStyle = styles["workday_right"];
+                                }
+                                dtM = dtM.AddDays(1);
                             }
                             else
                             {
-                                dayCell_1.CellStyle = styles["workday_left"];
-                                dayCell_2.CellStyle = styles["workday_right"];
+                                dayCell_1.CellStyle = styles["grey_left"];
+                                dayCell_2.CellStyle = styles["grey_right"];
                             }
-                            dtM = dtM.AddDays(1);
+                            cnt++;
                         }
-                        else
-                        {
-                            dayCell_1.CellStyle = styles["grey_left"];
-                            dayCell_2.CellStyle = styles["grey_right"];
-                        }
-                        cnt++;
+                        if (dtM.Month > (month + 1)) break;
                     }
-                    if (dtM.Month > (month + 1)) break;
                 }
-            }
 
-            // Write the output to a file
-            String file = "calendar.xls";
-            if (wb is XSSFWorkbook) file += "x";
-            using (FileStream fs = new FileStream(file, FileMode.Create))
-            {
-                wb.Write(fs);
+                // Write the output to a file
+                String file = "calendar.xls";
+                if (wb is XSSFWorkbook) file += "x";
+                using (FileStream fs = new FileStream(file, FileMode.Create))
+                {
+                    wb.Write(fs, false);
+                }
             }
         }
 

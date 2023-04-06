@@ -30,7 +30,7 @@ namespace WorkbookFactoryDemo
                 }*/
                 using (FileStream fileWriter = new FileStream("TestOutput.xlsx", FileMode.Create, FileAccess.ReadWrite, FileShare.None))
                 {
-                    workbook.Write(fileWriter);
+                    workbook.Write(fileWriter, false);
                 }
 
                 Console.ReadLine();

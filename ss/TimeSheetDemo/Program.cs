@@ -252,7 +252,7 @@ namespace TimeSheetDemo
             //Write the stream data of workbook to the root directory
             using (FileStream file = new FileStream(filename, FileMode.Create))
             {
-                workbook.Write(file);
+                workbook.Write(file,false);
             }
         }
 

@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateHeaderAndFooter", "Cr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapObjectToTable", "MapObjectToTable\MapObjectToTable.csproj", "{30B0565C-0EF7-42A9-BA50-13AACCD3C0F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeOrientation", "ChangeOrientation\ChangeOrientation.csproj", "{E469A195-88BC-4E59-A9CC-01B6A57FB457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeOrientation", "ChangeOrientation\ChangeOrientation.csproj", "{E469A195-88BC-4E59-A9CC-01B6A57FB457}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateHighlightRun", "CreateHighlightRun\CreateHighlightRun.csproj", "{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -211,6 +213,18 @@ Global
 		{E469A195-88BC-4E59-A9CC-01B6A57FB457}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E469A195-88BC-4E59-A9CC-01B6A57FB457}.Release|x86.ActiveCfg = Release|Any CPU
 		{E469A195-88BC-4E59-A9CC-01B6A57FB457}.Release|x86.Build.0 = Release|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Debug|x86.Build.0 = Debug|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Release|x86.ActiveCfg = Release|Any CPU
+		{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

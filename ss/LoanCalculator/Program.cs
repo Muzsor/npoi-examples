@@ -303,9 +303,10 @@ namespace LoanCalculator
             string filename = "loan-calculator.xls";
             if (workbook is XSSFWorkbook) filename += "x";
             //Write the stream data of workbook to the root directory
-            FileStream file = new FileStream(filename, FileMode.Create);
-            workbook.Write(file);
-            file.Close();
+            using (FileStream file = new FileStream(filename, FileMode.Create))
+            {
+                workbook.Write(file, false);
+            }
         }
 
         static void InitializeWorkbook(string[] args)

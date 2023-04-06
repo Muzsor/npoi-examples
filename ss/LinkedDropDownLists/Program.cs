@@ -95,7 +95,7 @@ namespace LinkedDropDownLists
             sheet.AddValidationData(validation);
 
             FileStream sw = File.OpenWrite(workbookName);
-            workbook.Write(sw);
+            workbook.Write(sw, false);
             sw.Close();
         }
         /**

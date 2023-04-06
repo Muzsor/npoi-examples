@@ -9,30 +9,32 @@ namespace CreateHighlightRun
     {
         static void Main(string[] args)
         {
-            XWPFDocument doc = new XWPFDocument();
-            XWPFParagraph paragraph = doc.CreateParagraph();
-            XWPFRun run = paragraph.CreateRun();
-            run.SetText("This is text with ");
-            run = paragraph.CreateRun();
-            run.SetText("background color");
-            run.GetCTR().AddNewRPr().shd = new CT_Shd();
-            CT_Shd cTShd = run.GetCTR().AddNewRPr().shd;
-            cTShd.val = ST_Shd.clear;
-            cTShd.color = "auto";
-            cTShd.fill = "00FFFF";
-
-            run = paragraph.CreateRun();
-            run.SetText(" and this is ");
-            run = paragraph.CreateRun();
-            run.SetText("highlighted");
-            run.GetCTR().AddNewRPr().highlight = new CT_Highlight();
-            run.GetCTR().AddNewRPr().highlight.val = ST_HighlightColor.yellow;
-            run = paragraph.CreateRun();
-            run.SetText(" text.");
-
-            using (FileStream fs = new FileStream("highlight.docx", FileMode.Create))
+            using (XWPFDocument doc = new XWPFDocument())
             {
-                doc.Write(fs);
+                XWPFParagraph paragraph = doc.CreateParagraph();
+                XWPFRun run = paragraph.CreateRun();
+                run.SetText("This is text with ");
+                run = paragraph.CreateRun();
+                run.SetText("background color");
+                run.GetCTR().AddNewRPr().shd = new CT_Shd();
+                CT_Shd cTShd = run.GetCTR().AddNewRPr().shd;
+                cTShd.val = ST_Shd.clear;
+                cTShd.color = "auto";
+                cTShd.fill = "00FFFF";
+
+                run = paragraph.CreateRun();
+                run.SetText(" and this is ");
+                run = paragraph.CreateRun();
+                run.SetText("highlighted");
+                run.GetCTR().AddNewRPr().highlight = new CT_Highlight();
+                run.GetCTR().AddNewRPr().highlight.val = ST_HighlightColor.yellow;
+                run = paragraph.CreateRun();
+                run.SetText(" text.");
+
+                using (FileStream fs = new FileStream("highlight.docx", FileMode.Create))
+                {
+                    doc.Write(fs);
+                }
             }
         }
     }
