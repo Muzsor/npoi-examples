@@ -13,25 +13,31 @@ namespace CopySheet
             //Excel worksheet combine example
             //Note: This example does not check for duplicate sheet names. Your test files should have different sheet names.
 
-            IWorkbook book1 = new XSSFWorkbook(new FileStream("file1.xlsx", FileMode.Open));
-            IWorkbook book2 = new XSSFWorkbook(new FileStream("file2.xlsx", FileMode.Open));
-            IWorkbook product = new XSSFWorkbook();
-
-            for (int i = 0; i < book1.NumberOfSheets; i++)
+            using (IWorkbook book1 = new XSSFWorkbook(new FileStream("file1.xlsx", FileMode.Open)))
             {
-                ISheet sheet1 = book1.GetSheetAt(i);
-                sheet1.CopyTo(product, sheet1.SheetName, true, true);
-            }
+                using (IWorkbook book2 = new XSSFWorkbook(new FileStream("file2.xlsx", FileMode.Open)))
+                {
+                    using (IWorkbook product = new XSSFWorkbook())
+                    {
 
-            for (int j = 0; j < book2.NumberOfSheets; j++)
-            {
-                ISheet sheet2 = book2.GetSheetAt(j);
-                sheet2.CopyTo(product, sheet2.SheetName, true, true);
-            }
+                        for (int i = 0; i < book1.NumberOfSheets; i++)
+                        {
+                            ISheet sheet1 = book1.GetSheetAt(i);
+                            sheet1.CopyTo(product, sheet1.SheetName, true, true);
+                        }
 
-            using (FileStream sw = File.Create("test.xlsx"))
-            {
-                product.Write(sw);
+                        for (int j = 0; j < book2.NumberOfSheets; j++)
+                        {
+                            ISheet sheet2 = book2.GetSheetAt(j);
+                            sheet2.CopyTo(product, sheet2.SheetName, true, true);
+                        }
+
+                        using (FileStream sw = File.Create("test.xlsx"))
+                        {
+                            product.Write(sw, false);
+                        }
+                    }
+                }
             }
         }
     }

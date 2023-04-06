@@ -14,22 +14,24 @@ namespace NPOI.Examples.XSSF.HideColumnAndRowInXlsx
     {
         static void Main(string[] args)
         {
-            IWorkbook workbook = new XSSFWorkbook();
-            ISheet s = workbook.CreateSheet("Sheet1");
-            for (int i = 0; i < 5; i++)
+            using (IWorkbook workbook = new XSSFWorkbook())
             {
-                s.CreateRow(i).CreateCell(0).SetCellValue("Row "+i);
-            }
+                ISheet s = workbook.CreateSheet("Sheet1");
+                for (int i = 0; i < 5; i++)
+                {
+                    s.CreateRow(i).CreateCell(0).SetCellValue("Row " + i);
+                }
 
-            var r2 = s.GetRow(1);
-            //hide Row 2
-            r2.ZeroHeight = true;
+                var r2 = s.GetRow(1);
+                //hide Row 2
+                r2.ZeroHeight = true;
 
-            //hide column C
-            s.SetColumnHidden(2, true);
-            using (FileStream sw = File.Create("test.xlsx"))
-            {
-                workbook.Write(sw);
+                //hide column C
+                s.SetColumnHidden(2, true);
+                using (FileStream sw = File.Create("test.xlsx"))
+                {
+                    workbook.Write(sw, false);
+                }
             }
         }
     }

@@ -13,17 +13,19 @@ namespace CreateWorkbookFromDataSet
         static void Main(string[] args)
         {
             var dataSet = CreateSampleData();
-            IWorkbook workbook = new XSSFWorkbook();
-
-            for (var tableIndex = 0; tableIndex < dataSet.Tables.Count; tableIndex++)
+            using (IWorkbook workbook = new XSSFWorkbook())
             {
-                var dt = dataSet.Tables[tableIndex];
-                CreateSheetFromDataTable(workbook, tableIndex, dt);
-            }
 
-            FileStream sw = File.Create("File.xlsx");
-            workbook.Write(sw);
-            sw.Close();
+                for (var tableIndex = 0; tableIndex < dataSet.Tables.Count; tableIndex++)
+                {
+                    var dt = dataSet.Tables[tableIndex];
+                    CreateSheetFromDataTable(workbook, tableIndex, dt);
+                }
+
+                FileStream sw = File.Create("File.xlsx");
+                workbook.Write(sw, false);
+                sw.Close();
+            }
         }
 
         private static void CreateSheetFromDataTable(IWorkbook workbook, int dataTableIndex, DataTable dataTable)

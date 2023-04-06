@@ -36,22 +36,23 @@ namespace ExtractPicturesFromXls
         static void Main(string[] args)
         {
             FileStream file = File.OpenRead(@"clothes.xlsx");
-            IWorkbook workbook = new XSSFWorkbook(file);
-
-            IList pictures = workbook.GetAllPictures();
-            int i = 0;
-            foreach (IPictureData pic in pictures)
+            using (IWorkbook workbook = new XSSFWorkbook(file))
             {
-                string ext = pic.SuggestFileExtension();
-                if (ext.Equals("jpeg"))
+                IList pictures = workbook.GetAllPictures();
+                int i = 0;
+                foreach (IPictureData pic in pictures)
                 {
-                    Image jpg = Image.FromStream(new MemoryStream(pic.Data));
-                    jpg.Save(string.Format("pic{0}.jpg",i++));
-                }
-                else if (ext.Equals("png"))
-                {
-                    Image png = Image.FromStream(new MemoryStream(pic.Data));
-                    png.Save(string.Format("pic{0}.png", i++));
+                    string ext = pic.SuggestFileExtension();
+                    if (ext.Equals("jpeg"))
+                    {
+                        Image jpg = Image.FromStream(new MemoryStream(pic.Data));
+                        jpg.Save(string.Format("pic{0}.jpg", i++));
+                    }
+                    else if (ext.Equals("png"))
+                    {
+                        Image png = Image.FromStream(new MemoryStream(pic.Data));
+                        png.Save(string.Format("pic{0}.png", i++));
+                    }
                 }
             }
         }

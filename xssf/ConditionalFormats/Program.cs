@@ -15,21 +15,23 @@ namespace ConditionalFormats
     {
         static void Main(string[] args)
         {
-            IWorkbook wb = new XSSFWorkbook();
-
-            SameCell(wb.CreateSheet("Same Cell"));
-            MultiCell(wb.CreateSheet("MultiCell"));
-            Errors(wb.CreateSheet("Errors"));
-            HideDupplicates(wb.CreateSheet("Hide Dups"));
-            FormatDuplicates(wb.CreateSheet("Duplicates"));
-            InList(wb.CreateSheet("In List"));
-            Expiry(wb.CreateSheet("Expiry"));
-            ShadeAlt(wb.CreateSheet("Shade Alt"));
-            ShadeBands(wb.CreateSheet("Shade Bands"));
-
-            using (var sw = File.Create("test.xlsx"))
+            using (IWorkbook wb = new XSSFWorkbook())
             {
-                wb.Write(sw);
+
+                SameCell(wb.CreateSheet("Same Cell"));
+                MultiCell(wb.CreateSheet("MultiCell"));
+                Errors(wb.CreateSheet("Errors"));
+                HideDupplicates(wb.CreateSheet("Hide Dups"));
+                FormatDuplicates(wb.CreateSheet("Duplicates"));
+                InList(wb.CreateSheet("In List"));
+                Expiry(wb.CreateSheet("Expiry"));
+                ShadeAlt(wb.CreateSheet("Shade Alt"));
+                ShadeBands(wb.CreateSheet("Shade Bands"));
+
+                using (var sw = File.Create("test.xlsx"))
+                {
+                    wb.Write(sw, false);
+                }
             }
         }
         /**
