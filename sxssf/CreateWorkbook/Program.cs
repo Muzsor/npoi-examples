@@ -24,7 +24,7 @@ namespace CreateWorkbook
             }
             using (var fs = File.Create("test.xlsx"))
             {
-                wb.Write(fs);
+                wb.Write(fs, false);
             }
         }
     }
