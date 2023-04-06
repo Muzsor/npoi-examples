@@ -21,23 +21,25 @@ namespace InsertPicturesInWord
 
         static void Main(string[] args)
         {
-            XWPFDocument doc = new XWPFDocument();
-            XWPFParagraph p2 = doc.CreateParagraph();
-            XWPFRun r2 = p2.CreateRun();
-            r2.SetText("test");
-
-
-            var widthEmus = (int)(400.0 * 9525);
-            var heightEmus = (int)(300.0 * 9525);
-
-            using (FileStream picData = new FileStream("../../image/HumpbackWhale.jpg", FileMode.Open, FileAccess.Read))
+            using (XWPFDocument doc = new XWPFDocument())
             {
-                r2.AddPicture(picData, (int)PictureType.PNG, "image1", widthEmus, heightEmus);
-            }
+                XWPFParagraph p2 = doc.CreateParagraph();
+                XWPFRun r2 = p2.CreateRun();
+                r2.SetText("test");
 
-            using (FileStream sw = File.Create("test.docx"))
-            {
-                doc.Write(sw);
+
+                var widthEmus = (int)(400.0 * 9525);
+                var heightEmus = (int)(300.0 * 9525);
+
+                using (FileStream picData = new FileStream("../../image/HumpbackWhale.jpg", FileMode.Open, FileAccess.Read))
+                {
+                    r2.AddPicture(picData, (int)PictureType.PNG, "image1", widthEmus, heightEmus);
+                }
+
+                using (FileStream sw = File.Create("test.docx"))
+                {
+                    doc.Write(sw);
+                }
             }
         }
     }

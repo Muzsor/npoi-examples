@@ -7,25 +7,27 @@ namespace MapObjectToTable
     {
         static void Main()
         {
-            XWPFDocument document = new XWPFDocument();
-            XWPFTableWrapper<ExampleClass> newWrapper = new XWPFTableWrapper<ExampleClass>(document);
-
-            ExampleClass exampleData = new ExampleClass()
+            using (XWPFDocument document = new XWPFDocument())
             {
-                Enum = ExampleEnum.Red,
-                Name = "This is a test",
-                IgnoredMember = "This member will be ignored",
-                Address = new ExampleChildClass()
-                {
-                    Address = "Burgemeester Schönfeldplein",
-                    City = "Winschoten",
-                    CountryCode = "NL"
-                }
-            };
-            newWrapper.AddRow(exampleData);
+                XWPFTableWrapper<ExampleClass> newWrapper = new XWPFTableWrapper<ExampleClass>(document);
 
-            using FileStream fs = new FileStream("test.docx", FileMode.Create);
-            document.Write(fs);
+                ExampleClass exampleData = new ExampleClass()
+                {
+                    Enum = ExampleEnum.Red,
+                    Name = "This is a test",
+                    IgnoredMember = "This member will be ignored",
+                    Address = new ExampleChildClass()
+                    {
+                        Address = "Burgemeester Schönfeldplein",
+                        City = "Winschoten",
+                        CountryCode = "NL"
+                    }
+                };
+                newWrapper.AddRow(exampleData);
+
+                using FileStream fs = new FileStream("test.docx", FileMode.Create);
+                document.Write(fs);
+            }
         }
     }
 }

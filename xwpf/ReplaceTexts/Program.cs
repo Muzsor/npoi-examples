@@ -44,12 +44,9 @@ namespace ReplaceTexts
             var template = @"Template1.docx";
             using (var rs = File.OpenRead(template))
             {
-
                 var generateFile = @"output1.docx";
-                using (var ws = File.Create(generateFile))
+                using (var doc = new XWPFDocument(rs))
                 {
-                    var doc = new XWPFDocument(rs);
-
                     foreach (var para in doc.Paragraphs)
                     {
                         foreach (var placeholder in placeHolderDictionary)
@@ -60,9 +57,12 @@ namespace ReplaceTexts
                             }
                         }
                     }
-                    doc.Write(ws);
+                    using (var ws = File.Create(generateFile))
+                    {
+                        doc.Write(ws);
+                    }
                 }
-            }
+                }
         }
     }
 }

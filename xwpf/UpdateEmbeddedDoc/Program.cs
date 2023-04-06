@@ -7,7 +7,6 @@
 using NPOI.OpenXml4Net.OPC;
 using NPOI.SS.UserModel;
 using NPOI.XWPF.UserModel;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -96,7 +95,7 @@ namespace UpdateEmbeddedDoc
          */
         public void UpdateEmbeddedDoc1()
         {
-            IWorkbook workbook = null;
+
             ISheet sheet = null;
             IRow row = null;
             NPOI.SS.UserModel.ICell cell = null;
@@ -117,18 +116,23 @@ namespace UpdateEmbeddedDoc
                         // to the create method of the WorkbookFactory class. Update
                         // the resulting Workbook and then stream that out again
                         // using an OutputStream obtained from the same PackagePart.
-                        workbook = WorkbookFactory.Create(pPart.GetInputStream());
-                        sheet = workbook.GetSheetAt(SHEET_NUM);
-                        row = sheet.GetRow(ROW_NUM);
-                        cell = row.GetCell(CELL_NUM);
-                        cell.SetCellValue(NEW_VALUE);
-                        workbook.Write(pPart.GetOutputStream());
+                        using (IWorkbook workbook = WorkbookFactory.Create(pPart.GetInputStream()))
+                        {
+                            sheet = workbook.GetSheetAt(SHEET_NUM);
+                            row = sheet.GetRow(ROW_NUM);
+                            cell = row.GetCell(CELL_NUM);
+                            cell.SetCellValue(NEW_VALUE);
+                            workbook.Write(pPart.GetOutputStream(), false);
+                        }
                     }
                 }
 
                 // Finally, write the newly modified Word document out to file.
                 string file = Path.GetFileNameWithoutExtension(this.docFile) + "tmp" + Path.GetExtension(this.docFile);
-                this.doc.Write(new FileStream(file, FileMode.CreateNew));
+                using (var fs = new FileStream(file, FileMode.CreateNew))
+                {
+                    this.doc.Write(fs);
+                }
             }
         }
 
@@ -179,7 +183,6 @@ namespace UpdateEmbeddedDoc
                         sheet = workbook.GetSheetAt(SHEET_NUM);
                         row = sheet.GetRow(ROW_NUM);
                         cell = row.GetCell(CELL_NUM);
-                        Assert.AreEqual(cell.NumericCellValue, NEW_VALUE);
                     }
                 }
             }
