@@ -69,7 +69,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateWorkbookFromDataSet",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertRowInExistingSheet", "InsertRowInExistingSheet\InsertRowInExistingSheet.csproj", "{8C821D14-DDC3-432C-9D90-9678C71B0857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillDateOnlyValue", "FillDateOnlyValue\FillDateOnlyValue.csproj", "{658190EE-EE39-42DE-84D7-989A4A1059E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillDateOnlyValue", "FillDateOnlyValue\FillDateOnlyValue.csproj", "{658190EE-EE39-42DE-84D7-989A4A1059E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaChart", "AreaChart\AreaChart.csproj", "{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PieChart", "PieChart\PieChart.csproj", "{3F747A6D-398D-470E-BE13-4AB13513D817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -405,6 +409,30 @@ Global
 		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|x86.ActiveCfg = Release|Any CPU
 		{658190EE-EE39-42DE-84D7-989A4A1059E6}.Release|x86.Build.0 = Release|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Debug|x86.Build.0 = Debug|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Release|x86.ActiveCfg = Release|Any CPU
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E}.Release|x86.Build.0 = Release|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Debug|x86.Build.0 = Debug|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Release|x86.ActiveCfg = Release|Any CPU
+		{3F747A6D-398D-470E-BE13-4AB13513D817}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -417,6 +445,8 @@ Global
 		{BABCE350-9EC0-4EE7-A8E5-7CC73CA5E667} = {CD941EF6-8FB7-467D-8AE7-0C85E07BD53F}
 		{A429FB81-425D-4046-92B5-CBE0FBC9AA3F} = {8CFB89FD-C679-473B-B421-D7EC19D7FC4F}
 		{49B4A4CB-DC0D-4A97-B2BD-07029F870004} = {8CFB89FD-C679-473B-B421-D7EC19D7FC4F}
+		{8DB6470A-F4CE-48AF-BAAD-85ED23B2090E} = {8CFB89FD-C679-473B-B421-D7EC19D7FC4F}
+		{3F747A6D-398D-470E-BE13-4AB13513D817} = {8CFB89FD-C679-473B-B421-D7EC19D7FC4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A9EA368-2013-45D4-958A-0239C236D901}
