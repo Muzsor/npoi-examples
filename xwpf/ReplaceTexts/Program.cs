@@ -62,7 +62,8 @@ namespace ReplaceTexts
                         doc.Write(ws);
                     }
                 }
-                }
+                //you can use XWPFDocument.FindAndReplaceText method since NPOI 2.6.1
+            }
         }
     }
 }
