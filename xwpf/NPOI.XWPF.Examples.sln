@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeOrientation", "Change
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateHighlightRun", "CreateHighlightRun\CreateHighlightRun.csproj", "{8D5CD8EE-8DCB-445B-A70D-A87CEC008602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateComments", "CreateComments\CreateComments.csproj", "{208C37F8-3E42-46A2-955D-0A2E3E68FAE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateComments", "CreateComments\CreateComments.csproj", "{208C37F8-3E42-46A2-955D-0A2E3E68FAE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneragePageNumber", "GeneragePageNumber\GeneragePageNumber.csproj", "{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -239,6 +241,18 @@ Global
 		{208C37F8-3E42-46A2-955D-0A2E3E68FAE6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{208C37F8-3E42-46A2-955D-0A2E3E68FAE6}.Release|x86.ActiveCfg = Release|Any CPU
 		{208C37F8-3E42-46A2-955D-0A2E3E68FAE6}.Release|x86.Build.0 = Release|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Debug|x86.Build.0 = Debug|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC5190AD-C83A-47CD-A62C-B3311F4AAF19}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
